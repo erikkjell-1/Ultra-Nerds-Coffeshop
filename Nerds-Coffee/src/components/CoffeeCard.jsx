@@ -1,7 +1,9 @@
+import './CoffeeCard.css'
+
 import { addCoffee } from './addCoffee';
 import { useDispatch } from 'react-redux';
 
-function CoffeeCard() {
+function CoffeeCard(props) {
  const dispatch = useDispatch();
 
  function handleClick() {
@@ -9,7 +11,14 @@ function CoffeeCard() {
  }
 
  return (
-    <button onClick={ handleClick }>lägg till kaffe</button>
+    <article className='coffeecard'>
+        <button onClick={ handleClick } className='coffeecard__button'>+</button>
+        <div className='coffeecard__text'>
+            <h2 className='coffeecard__title'>{ props.title }BryggKaffe</h2>
+            <p className='coffeecard__desc'>{ props.desc }Bryggd på månadens bönor</p>
+        </div>
+        <p className='coffeecard__price'>{ props.price }49 kr</p>
+    </article>
  )
 }
 

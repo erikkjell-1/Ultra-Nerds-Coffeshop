@@ -1,0 +1,45 @@
+.coffeecard {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.coffeecard__button {
+    background: #2F2926;
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.12);
+    color: white;
+    height: 32px;
+    width: 32px;
+    font-size: 2rem;
+    border-radius: 100rem;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.coffeecard__title {
+    font-family: 'PT Serif';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 120%;
+    border-bottom: 1px dotted #00000066;
+}
+
+.coffeecard__desc {
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 130%;
+}
+
+.coffeecard__price {
+    font-family: 'PT Serif';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 120%;
+}
