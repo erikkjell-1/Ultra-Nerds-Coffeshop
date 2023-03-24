@@ -1,4 +1,5 @@
 import './App.css'
+import CoffeeCard from './components/CoffeeCard'
 
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 
@@ -11,6 +12,12 @@ import getApi from './components/Api'
 
 
 function App() {
+
+
+  return (
+    <div className="App">
+      <CoffeeCard />
+
 
   const router = createBrowserRouter([
     {
@@ -35,6 +42,7 @@ function App() {
     <div className="App">
 
       <RouterProvider router={ router } />
+
 
     </div>
   )
