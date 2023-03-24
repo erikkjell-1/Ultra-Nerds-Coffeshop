@@ -1,0 +1,31 @@
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    z-index: 1;
+    display: none;
+  }
+  
+.slider.show {
+    display: flex;
+  }
+
+.slider.close {
+    display: none;
+}
+ 
+.menuSlide {
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+}
+ 

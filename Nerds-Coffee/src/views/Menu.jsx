@@ -1,6 +1,8 @@
 // import menuApi from "../components/Api/Menu"
 import CoffeeCard from "../components/CoffeeCard"
 import { useState, useEffect } from "react"
+import Slider from "../components/Slider";
+import './Menu.css'
 
 function Menu() {
 
@@ -26,9 +28,17 @@ menuApi()
     return <CoffeeCard coffee={ coffee }/>
   })
 
+  function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+  }
+
   return (
     <section>
+    <button onClick="window.location.reload()" />
+      <Slider />
+
       { coffeeComponents }
+
     </section>
   )
 }
