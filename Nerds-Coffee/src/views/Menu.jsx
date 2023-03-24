@@ -1,4 +1,4 @@
-// import menuApi from "../components/Api/Menu"
+import ShoppingCart from "../components/ShoppingCart";
 import CoffeeCard from "../components/CoffeeCard"
 import { useState, useEffect } from "react"
 import Slider from "../components/Slider";
@@ -7,29 +7,29 @@ import './Menu.css'
 function Menu() {
 
   const [menu, setMenu] = useState([]);
+  const [isShown, setIsShown] = useState(false)
 
 
   useEffect(() => {
     const menu_url = 'https://airbean.awesomo.dev/api/beans/';
 
-  async function menuApi() {
+    async function menuApi() {
     
-    const response = await fetch(menu_url);
+      const response = await fetch(menu_url);
     
-    let data = await response.json();
-    console.log(data.menu);
-    setMenu(data.menu)
-}
-menuApi()
-  }, [])
+      let data = await response.json();
+      setMenu(data.menu)
+    }
+    menuApi()
+  }, []);
    
 
   const coffeeComponents = menu.map((coffee) => {
-    return <CoffeeCard coffee={ coffee }/>
+    return <CoffeeCard coffee={ coffee } key={ coffee.id }/>
   })
 
-  function openNav() {
-    document.getElementById("myNav").style.width = "100%";
+  const handleClick = event => {
+    setIsShown(current => !current);
   }
 
   return (
@@ -38,7 +38,10 @@ menuApi()
       <Slider />
 
       { coffeeComponents }
-
+      <button onClick={ handleClick }>visa cart</button>
+      {isShown && (
+        <ShoppingCart/>
+      )}
     </section>
   )
 }
