@@ -14,11 +14,6 @@ import getApi from './components/Api'
 function App() {
 
 
-  return (
-    <div className="App">
-      <CoffeeCard />
-
-
   const router = createBrowserRouter([
     {
       path: '/',
