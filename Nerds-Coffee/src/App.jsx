@@ -3,7 +3,7 @@ import CoffeeCard from './components/CoffeeCard'
 
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 
-import Startpage from './views/Menu'
+import Startpage from './views/Startpage'
 import Menu from './views/Menu'
 import Order from './views/Order'
 import OurCoffee from './views/OurCoffee'
