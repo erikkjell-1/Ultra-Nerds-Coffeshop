@@ -8,7 +8,7 @@ const reducer = (state = initialState, action) => {
         case 'add':
             return {
                 ...state,
-                order: state.order + action.payload
+                order: state.order.concat([action.payload]) 
             }
         // case 'remove':
         //     return {
