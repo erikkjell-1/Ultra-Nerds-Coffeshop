@@ -35,7 +35,7 @@ function App() {
 
   return (
     <div className="App">
-
+      <CoffeeCard/>
       <RouterProvider router={ router } />
 
 

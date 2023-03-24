@@ -1,8 +1,9 @@
 const initialState = {
-    order: {}
+    order: []
 }
 
 const reducer = (state = initialState, action) => {
+    
     switch (action.type) {
         case 'add':
             return {
