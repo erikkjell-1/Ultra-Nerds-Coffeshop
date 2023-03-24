@@ -7,7 +7,7 @@ function CoffeeCard(props) {
  const dispatch = useDispatch();
 
  function handleClick() {
-     dispatch(addCoffee('kaffenamn och pris ska in här'))
+     dispatch(addCoffee(props.coffee))
  }
 
  return (
@@ -17,7 +17,7 @@ function CoffeeCard(props) {
             <h2 className='coffeecard__title'>{ props.coffee.title }</h2>
             <p className='coffeecard__desc'>{ props.coffee.desc }</p>
         </div>
-        <p className='coffeecard__price'>{ props.coffee.price }</p>
+        <p className='coffeecard__price'>{ props.coffee.price } kr</p>
     </article>
  )
 }
