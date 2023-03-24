@@ -1,13 +1,14 @@
 const initialState = {
-    order: {}
+    order: []
 }
 
 const reducer = (state = initialState, action) => {
+    
     switch (action.type) {
         case 'add':
             return {
                 ...state,
-                order: state.order + action.payload
+                order: state.order.concat([action.payload]) 
             }
         // case 'remove':
         //     return {

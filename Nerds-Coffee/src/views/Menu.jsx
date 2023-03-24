@@ -1,4 +1,4 @@
-function Startpage() {
+function Menu() {
 
     return (
       <section>
@@ -7,4 +7,4 @@ function Startpage() {
     )
   }
   
-  export default Startpage
+  export default Menu
