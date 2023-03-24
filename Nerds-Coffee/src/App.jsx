@@ -1,10 +1,14 @@
 import './App.css'
+
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 
 import Startpage from './views/Menu'
 import Menu from './views/Menu'
 import Order from './views/Order'
 import OurCoffee from './views/OurCoffee'
+
+import getApi from './components/Api'
+
 
 function App() {
 
@@ -29,7 +33,9 @@ function App() {
 
   return (
     <div className="App">
+
       <RouterProvider router={ router } />
+
     </div>
   )
 }
