@@ -1,13 +1,14 @@
 import { useLocation } from "react-router-dom"
 import { useEffect, useState } from "react";
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { addOrderedCoffee } from "../components/addCoffee";
 
 function Order() {
   const navigationState = useLocation();
   console.log(navigationState.state.ordersToSend);
-  let ordered = {};
+  const [ordered, setOrdered] = useState({})
   const dispatch = useDispatch();
+  const orders = useSelector((state) => { return state.ordered })
 
   useEffect(() => {
     async function getOrder() {
@@ -26,17 +27,17 @@ function Order() {
     })
     const data = await response.json();
     console.log(data);
-    ordered = data;
     dispatch(addOrderedCoffee(data))
     }
     getOrder()
+    setOrdered(orders)
 }, [])
 
     return (
       <section>
-        <p>ordernummer { ordered.orderNr }</p>
+        <p>ordernummer { orders.orderNr }</p>
         <h1>Din beställning är på väg!</h1>
-        <p>{ ordered.eta } minuter</p>
+        <p>{ orders.eta } minuter</p>
         
       </section>
     )
