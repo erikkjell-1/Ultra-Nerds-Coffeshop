@@ -1,16 +1,14 @@
-function toggleOverlay() {
-    overlay.classList.toggle("show");
-}
+import { Link } from "react-router-dom";
 
- function Slider() {
+function Slider() {
     return(
         <div className="slider" id="slider">
-            <button className="closebtn" onClick= { toggleOverlay } />
-            <h1>Meny</h1>
+            <button className="slider__button" onClick={ () => window.location.reload() } />
+            <Link to='/menu' className='slider__text'>Meny</Link>
             <hr />
-            <h1>Vårt Kaffe</h1>
+            <Link to='/ourcoffee' className='slider__text'>Vårt Kaffe</Link>
             <hr />
-            <h1>Orderstatus</h1>
+            <Link to='/order' className='slider__text'>Orderstatus</Link>
         </div>
     )
   }

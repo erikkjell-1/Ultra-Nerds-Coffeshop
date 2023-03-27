@@ -14,18 +14,52 @@
     z-index: 1;
     display: none;
   }
+
+.slider__button {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
   
 .slider.show {
     display: flex;
+    transition: 0.3s;
   }
 
-.slider.close {
-    display: none;
+.openSlider {
+    height: 100px;
+    width: 100px;
 }
- 
-.menuSlide {
-    height: 48px;
+.slider__text {
+    font-family: 'PT Serif';
+font-style: normal;
+font-weight: 700;
+font-size: 32px;
+line-height: 120%;
+/* or 38px */
+
+display: flex;
+align-items: center;
+text-align: center;
+text-decoration: none;
+color: #FFFFFF;
+}
+
+.slider__text:hover {
+    opacity: 50%;
+
+}
+
+hr {
     width: 48px;
-    border-radius: 50%;
+height: 1px;
+border: none;
+background: rgba(255, 255, 255, 0.2);
+border-radius: 2px;
 }
+
+
+
+ 
+
  

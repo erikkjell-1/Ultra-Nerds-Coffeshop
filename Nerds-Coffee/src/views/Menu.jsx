@@ -32,9 +32,13 @@ function Menu() {
     setIsShown(current => !current);
   }
 
+  function toggleOverlay() {
+    slider.classList.toggle("show");
+}
+
   return (
     <section>
-    <button onClick="window.location.reload()" />
+    <button  className='openSlider' onClick= { toggleOverlay } />
       <Slider />
 
       { coffeeComponents }
