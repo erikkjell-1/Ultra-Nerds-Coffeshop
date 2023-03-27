@@ -1,17 +1,19 @@
 import { useLocation } from "react-router-dom"
 import { useEffect, useState } from "react";
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { addOrderedCoffee } from "../components/addCoffee";
+import Slider from "../components/Slider";
 
 function Order() {
   const navigationState = useLocation();
-  console.log(navigationState.state.ordersToSend);
+  console.log(navigationState);
   const [ordered, setOrdered] = useState({})
   const dispatch = useDispatch();
-  // const orders = useSelector((state) => { return state.ordered })
+  const inOrdered = useSelector((state) => { return state.ordered })
 
   useEffect(() => {
-    async function getOrder() {
+    if (navigationState.state) {
+      async function getOrder() {
         const body = {
             details: {
                 order: navigationState.state.ordersToSend
@@ -26,20 +28,42 @@ function Order() {
         }
     })
     const data = await response.json();
-    console.log(data);
     setOrdered(data)
     dispatch(addOrderedCoffee(data))
     }
     getOrder()
+    }
+    else if (inOrdered.eta) {
+      
+      async function checkOrder() {
+        const response = await fetch(`https://airbean.awesomo.dev/api/beans/order/status/${ inOrdered.orderNr }`)
+        const data = await response.json();
+        console.log(data);
+        let newOrder = {
+          orderNr: inOrdered.orderNr,
+          eta: data.eta
+        }
+        setOrdered(newOrder)
+      }
+      checkOrder()
+    }
+    else {
+      alert('det finns ingen beställning!')
+    }
     
-}, [])
+    
+  }, [])
+  function toggleOverlay() {
+    document.getElementById("slider").style.display = "flex";
+}
 
     return (
       <section>
         <p>ordernummer { ordered.orderNr }</p>
         <h1>Din beställning är på väg!</h1>
         <p>{ ordered.eta } minuter</p>
-        
+        <button  className='openSlider' onClick= { toggleOverlay } />
+        <Slider />
       </section>
     )
   }

@@ -7,9 +7,7 @@ function ShoppingCart() {
 
     let totalPrice = 0;
     const orders = useSelector((state) => { return state.order })
-    const [test, setTest] = useState([]);
     const navigate = useNavigate();
-    console.log(orders);
 
     const orderComponents = orders.map((order) => {
         return <CoffeeCart order={ order } key={ order.id }/>
