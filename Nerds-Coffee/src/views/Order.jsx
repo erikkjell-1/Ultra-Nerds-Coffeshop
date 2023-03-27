@@ -34,7 +34,7 @@ function Order() {
     getOrder()
     }
     else if (inOrdered.eta) {
-      
+      console.log('hej');
       async function checkOrder() {
         const response = await fetch(`https://airbean.awesomo.dev/api/beans/order/status/${ inOrdered.orderNr }`)
         const data = await response.json();
