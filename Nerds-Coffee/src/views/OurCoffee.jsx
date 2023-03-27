@@ -10,7 +10,12 @@ function OurCoffee() {
     return (
       <section>
         <div className="coffee">
-        <button  className='openSlider' onClick= { toggleOverlay } />
+        <svg onClick= { toggleOverlay } width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="24" cy="24" r="24" fill="white"/>
+<rect x="11" y="14" width="26" height="2" rx="1" fill="#222222"/>
+<rect x="11" y="23" width="26" height="2" rx="1" fill="#222222"/>
+<rect x="11" y="32" width="26" height="2" rx="1" fill="#222222"/>
+</svg>
           <Slider />
           <h1 className="coffee__header">Vårt kaffe</h1>
 
