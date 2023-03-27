@@ -1,5 +1,7 @@
 const initialState = {
-    order: []
+    order: [],
+    ordered: {}
+
 }
 
 const reducer = (state = initialState, action) => {
@@ -10,10 +12,16 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 order: state.order.concat([action.payload]) 
             }
-        // case 'remove':
-        //     return {
-        //         ...state
-        //     }
+        case 'addOrdered':
+            return {
+                ...state,
+                ordered: action.payload
+            }
+        case 'updateOrdered':
+            return {
+                ...state,
+                ordered: state.ordered.eta = action.payload.eta
+            }
     
         default:
             return state
