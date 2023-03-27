@@ -1,9 +1,13 @@
 import { Link } from "react-router-dom";
 
+function closeOverlay() {
+    document.getElementById("slider").style.display = "none";
+}
+
 function Slider() {
     return(
         <div className="slider" id="slider">
-            <button className="slider__button" onClick={ () => window.location.reload() } />
+            <button  className='close__slider' onClick= { closeOverlay } />
             <Link to='/menu' className='slider__text'>Meny</Link>
             <hr />
             <Link to='/ourcoffee' className='slider__text'>Vårt Kaffe</Link>

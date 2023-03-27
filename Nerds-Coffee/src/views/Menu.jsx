@@ -33,7 +33,7 @@ function Menu() {
   }
 
   function toggleOverlay() {
-    slider.classList.toggle("show");
+    document.getElementById("slider").style.display = "flex";
 }
 
   return (
