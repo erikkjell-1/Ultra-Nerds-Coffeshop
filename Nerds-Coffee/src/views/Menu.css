@@ -20,6 +20,26 @@ width: 60px;
 border-radius: 50%;
 background: #2F2926;
 box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.12);
+display: grid;
+grid-template-columns: repeat(1, 1fr);
+align-content: center;
+justify-items: center;
+border: none;
+}
+
+.cart__number {
+background: #E5674E;
+display: flex;
+align-items: center;
+justify-content: center;
+width: 22px;
+height: 22px;
+border-radius: 50%;
+color: #FFFFFF;
+z-index: 1;
+position: absolute;
+right: 18rem;
+
 }
 
 
