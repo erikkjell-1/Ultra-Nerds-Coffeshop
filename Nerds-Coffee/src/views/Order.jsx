@@ -1,4 +1,5 @@
-import { useLocation } from "react-router-dom"
+import './Order.css'
+import { useLocation, Link } from "react-router-dom"
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from 'react-redux';
 import { addOrderedCoffee } from "../components/addCoffee";
@@ -11,7 +12,6 @@ function Order() {
   })
   const dispatch = useDispatch();
   const inOrdered = useSelector((state) => { return state.ordered })
-  console.log(navigationState);
 
   useEffect(() => {
     if (navigationState.state) {
@@ -55,17 +55,12 @@ function Order() {
 }
 
     return (
-      <section>
-        <p>ordernummer { ordered.orderNr }</p>
-        <h1>Din beställning är på väg!</h1>
-        <p>{ ordered.eta } minuter</p>
-        <svg onClick= { toggleOverlay } width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle cx="24" cy="24" r="24" fill="white"/>
-<rect x="11" y="14" width="26" height="2" rx="1" fill="#222222"/>
-<rect x="11" y="23" width="26" height="2" rx="1" fill="#222222"/>
-<rect x="11" y="32" width="26" height="2" rx="1" fill="#222222"/>
-</svg>
-        <Slider />
+      <section className='order'>
+        <p className='order__nr--text'>ordernummer <span className='order__nr--nr'>#{ ordered.orderNr }</span></p>
+        <img src="/src/views/img/drone.svg" alt="coffeedrone" />
+        <h1 className='order__heading'>Din beställning är på väg!</h1>
+        <p className='order__eta'>{ ordered.eta } <span className='order__eta--minutes'>minuter</span></p>
+        <Link to='/menu' className='order__button'>Ok, cool!</Link>
       </section>
     )
   }
