@@ -1,6 +1,27 @@
 .coffee__menu {
 background: #F3E4E1;
+display: grid;
+grid-template-columns: repeat(1,1fr);
+justify-items: center;
+justify-content: space-between;
+position: relative;
+height: 100vh;
 }
+
+.coffee__menu--grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+}
+
+.cart {
+height: 60px;
+width: 60px;
+border-radius: 50%;
+background: #2F2926;
+box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.12);
+}
+
 
 .slider {
     height: 100%;
