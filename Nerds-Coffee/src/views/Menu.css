@@ -3,15 +3,14 @@ background: #F3E4E1;
 display: grid;
 grid-template-columns: repeat(1,1fr);
 justify-items: center;
-justify-content: space-between;
 position: relative;
 height: 100vh;
 }
 
-.coffee__menu--grid {
-    display: flex;
-    justify-content: space-between;
-    gap: 5rem;
+.coffee__menu--svg{
+    position: absolute;
+    left: 10px;
+    top: 10px;
 }
 
 .cart {
@@ -25,6 +24,9 @@ grid-template-columns: repeat(1, 1fr);
 align-content: center;
 justify-items: center;
 border: none;
+position: absolute;
+right: 10px;
+top: 10px;
 }
 
 .cart__number {
@@ -38,10 +40,9 @@ border-radius: 50%;
 color: #FFFFFF;
 z-index: 1;
 position: absolute;
-right: 18rem;
+right: 4px;
 
 }
-
 
 .slider {
     height: 100%;
@@ -60,6 +61,9 @@ right: 18rem;
     width: 48px;
     height: 48px;
     border-radius: 50%;
+    position: relative;
+    top: 10px;
+    left: 10px;
 }
   
 .slider.show {
@@ -82,8 +86,6 @@ font-style: normal;
 font-weight: 700;
 font-size: 32px;
 line-height: 120%;
-/* or 38px */
-
 display: flex;
 align-items: center;
 text-align: center;
@@ -93,7 +95,6 @@ color: #FFFFFF;
 
 .slider__text:hover {
     opacity: 50%;
-
 }
 
 hr {
@@ -104,8 +105,15 @@ background: rgba(255, 255, 255, 0.2);
 border-radius: 2px;
 }
 
-
-
- 
-
- 
+.airbean__title {
+    top: 10rem;
+    font-family: 'PT Serif';
+font-style: normal;
+font-weight: 700;
+font-size: 42px;
+line-height: 120%;
+display: flex;
+align-items: center;
+text-align: center;
+color: #2F2926;
+}
