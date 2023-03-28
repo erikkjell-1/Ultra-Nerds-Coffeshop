@@ -24,7 +24,13 @@ function ShoppingCart() {
                 price: order.price
             }
         })
-        navigate('/order', { state: { ordersToSend: ordersToSend }})
+        if (ordersToSend.length === 0) {
+            alert('köp något!')
+        }
+        else {
+            navigate('/order', { state: { ordersToSend: ordersToSend }})
+        }
+        
     }
 
     return (
