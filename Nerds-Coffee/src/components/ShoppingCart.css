@@ -1,0 +1,54 @@
+.dropdown {
+    padding: 3rem; 
+    background-color: #FFFFFF;
+    z-index: 1000;
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    top: 3.5rem;
+    gap: 1rem;
+}
+
+.dropdown h1 {
+    font-family: 'PT Serif';
+font-style: normal;
+font-weight: 700;
+font-size: 32px;
+line-height: 120%;
+display: flex;
+align-items: center;
+text-align: center;
+color: #2F2926;
+}
+
+.dropdown h2 {
+    font-family: 'PT Serif';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 120%;
+display: flex;
+align-items: center;
+color: #2F2926;
+}
+
+.dropdown button {
+    width: 248px;
+height: 55px;
+background: #2F2926;
+border-radius: 50px;
+font-family: 'PT Serif';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 120%;
+
+text-align: center;
+color: #FFFFFF;
+}
+
+
+

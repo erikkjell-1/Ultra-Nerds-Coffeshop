@@ -3,6 +3,7 @@ import CoffeeCard from "../components/CoffeeCard"
 import { useState, useEffect } from "react"
 import Slider from "../components/Slider";
 import './Menu.css'
+import '../components/ShoppingCart.css'
 import { useSelector } from "react-redux";
 
 function Menu() {
@@ -39,8 +40,7 @@ function Menu() {
 
   return (
     <section className="coffee__menu">
-      <aside className="coffee__menu--grid">
-    <svg onClick= { toggleOverlay } width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg className='coffee__menu--svg' onClick= { toggleOverlay } width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
 <circle cx="24" cy="24" r="24" fill="white"/>
 <rect x="11" y="14" width="26" height="2" rx="1" fill="#222222"/>
 <rect x="11" y="23" width="26" height="2" rx="1" fill="#222222"/>
@@ -52,11 +52,13 @@ function Menu() {
 </svg>
 <aside className="cart__number">{ orders.length }</aside>
 </button>
+
+<h1 className="airbean__title">Meny</h1>
       
       {isShown && (
         <ShoppingCart/>
       )}
-</aside>
+
       <Slider />
 
       { coffeeComponents }

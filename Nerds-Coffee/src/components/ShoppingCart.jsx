@@ -2,6 +2,7 @@ import { useSelector } from 'react-redux';
 import CoffeeCart from './CoffeeCart';
 import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import './CoffeeCart.css'
 
 function ShoppingCart() {
 
@@ -34,7 +35,7 @@ function ShoppingCart() {
     }
 
     return (
-        <section>
+        <section className='dropdown'>
             <h1>Din beställning</h1>
             { orderComponents }
             <div>
