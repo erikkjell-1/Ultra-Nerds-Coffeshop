@@ -15,7 +15,8 @@ const reducer = (state = initialState, action) => {
         case 'addOrdered':
             return {
                 ...state,
-                ordered: action.payload
+                ordered: action.payload,
+                order: state.order = []
             }
         case 'updateOrdered':
             return {

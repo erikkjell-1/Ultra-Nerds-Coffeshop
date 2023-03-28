@@ -6,10 +6,12 @@ import Slider from "../components/Slider";
 
 function Order() {
   const navigationState = useLocation();
-  console.log(navigationState);
-  const [ordered, setOrdered] = useState({})
+  const [ordered, setOrdered] = useState({
+    orderNr: 'Du har inte beställt något!'
+  })
   const dispatch = useDispatch();
   const inOrdered = useSelector((state) => { return state.ordered })
+  console.log(navigationState);
 
   useEffect(() => {
     if (navigationState.state) {
@@ -34,11 +36,9 @@ function Order() {
     getOrder()
     }
     else if (inOrdered.eta) {
-      console.log('hej');
       async function checkOrder() {
         const response = await fetch(`https://airbean.awesomo.dev/api/beans/order/status/${ inOrdered.orderNr }`)
         const data = await response.json();
-        console.log(data);
         let newOrder = {
           orderNr: inOrdered.orderNr,
           eta: data.eta
@@ -46,9 +46,6 @@ function Order() {
         setOrdered(newOrder)
       }
       checkOrder()
-    }
-    else {
-      alert('det finns ingen beställning!')
     }
     
     
