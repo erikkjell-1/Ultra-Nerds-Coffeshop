@@ -12,6 +12,22 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 order: state.order.concat([action.payload]) 
             }
+        case 'updateAmount':
+            state.order.forEach((coffee) => {
+                if (coffee.title === action.payload.title) {
+                    console.log(coffee.quantity);
+                    return {
+                        ...state,
+                        coffee: coffee.quantity + 1
+                            
+                            // coffee.order.quantity + action.payload.quantity
+                    }
+                }
+                else {
+                    console.log('inte samma namn');
+                }
+            })
+            
         case 'addOrdered':
             return {
                 ...state,
