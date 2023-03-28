@@ -1,5 +1,3 @@
-
-
 function CoffeeCart(props) {
 
     return (
