@@ -1,11 +1,37 @@
 .coffee__menu {
 background: #F3E4E1;
-display: grid;
-grid-template-columns: repeat(1,1fr);
+display: flex;
+flex-direction: column;
 justify-items: center;
 position: relative;
 height: 100vh;
 }
+
+.coffee__menu header{
+    position: relative;
+    width: 100%;
+}
+
+.coffee__menu .graphicHeader{
+    width: 100%;
+}
+
+.coffee__menu main{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.coffee__menu footer{
+    width: 100%;
+}
+
+.coffee__menu .graphicFooter{
+    width: 100%;
+}
+
 
 .coffee__menu--svg{
     position: absolute;
