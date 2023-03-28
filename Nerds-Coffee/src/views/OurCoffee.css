@@ -1,6 +1,62 @@
 .coffee {
     display: block;
+    background-color: #f3e4e1;
+}
 
+.coffee header{
+    position: relative;
+}
+
+.coffee header svg{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+.coffee main{
+    padding: 0 2rem;
+    margin-top: 2rem;
+}
+
+.coffee footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.coffee footer article{
+    padding: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.coffee footer .Eva{
+    border-radius: 50%;
+}
+
+.coffee footer article h3{
+    font-family: 'PT Serif';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 160%;
+}
+
+.coffee footer article p{
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 160%;
+}
+
+.coffee .graphicHeader,
+.coffee .graphicFooter {
+    width: 100%;
+    
 }
 
 .coffee__header {
@@ -48,6 +104,7 @@ color: #2F2926;
     /* Airbean - brown */
     
     color: #2F2926;
+    margin: 1rem 0;
 
 }
 
