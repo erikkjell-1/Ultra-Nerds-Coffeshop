@@ -1,6 +1,14 @@
 function addCoffee(value) {
+    console.log(value);
     return {
         type: 'add',
+        payload: value
+    }
+}
+
+function updateCoffeeAmount(value) {
+    return {
+        type: 'updateAmount',
         payload: value
     }
 }
@@ -19,4 +27,4 @@ function updateOrdered(value) {
     }
 }
 
-export { addCoffee, addOrderedCoffee, updateOrdered }
+export { addCoffee, addOrderedCoffee, updateOrdered, updateCoffeeAmount }
