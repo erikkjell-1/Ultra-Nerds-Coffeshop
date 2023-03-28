@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import Slider from "../components/Slider";
 import './Menu.css'
 import '../components/ShoppingCart.css'
+import '../components/Slider.css'
 import { useSelector } from "react-redux";
 
 function Menu() {
