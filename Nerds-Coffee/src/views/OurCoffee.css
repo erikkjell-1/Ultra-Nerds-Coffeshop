@@ -53,6 +53,12 @@
     line-height: 160%;
 }
 
+.coffee .graphicHeader,
+.coffee .graphicFooter {
+    width: 100%;
+    
+}
+
 .coffee__header {
     font-family: 'PT Serif';
     font-style: normal;
