@@ -1,0 +1,17 @@
+.addremove {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.addremove__num {
+    font-size: 24px;
+}
+
+.addremove__button  {
+    width: 1.3rem !important;
+    height: 1.3rem !important;
+    line-height: 0 !important;
+    margin: 5px;
+    border: none;
+}

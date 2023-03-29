@@ -14,8 +14,9 @@ function ShoppingCart() {
         return <CoffeeCart order={ order } key={ order.id }/>
     })
 
-    orders.forEach(order => {
-        totalPrice = totalPrice + order.price
+    orders.forEach((order) => {
+        let pricePerSort = order.price * order.quantity
+        totalPrice = totalPrice + pricePerSort
     });
 
     function handleClick() {

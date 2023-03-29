@@ -26,6 +26,21 @@ const reducer = (state = initialState, action) => {
                     
                 })
             } 
+            case 'removeCoffee':
+            return {
+                ...state,
+                order: state.order.filter((item) => {
+                    if (item.title === action.payload.title) {
+                       item.quantity = item.quantity - 1
+                       if (item.quantity > 0) {
+                        return item
+                       }
+                    } else {
+                        return item
+                    }
+                    
+                })
+            } 
         case 'addOrdered':
             return {
                 ...state,

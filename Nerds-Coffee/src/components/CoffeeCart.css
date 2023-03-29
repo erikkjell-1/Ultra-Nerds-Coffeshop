@@ -7,3 +7,8 @@ line-height: 130%;
 color: #2F2926;
 }
 
+.coffeecart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

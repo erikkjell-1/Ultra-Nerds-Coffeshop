@@ -13,6 +13,13 @@ function updateCoffeeAmount(value) {
     }
 }
 
+function removeCoffee(value) {
+    return {
+        type: 'removeCoffee',
+        payload: value
+    }
+}
+
 function addOrderedCoffee(value) {
     return {
         type: 'addOrdered',
@@ -27,4 +34,4 @@ function updateOrdered(value) {
     }
 }
 
-export { addCoffee, addOrderedCoffee, updateOrdered, updateCoffeeAmount }
+export { addCoffee, addOrderedCoffee, updateOrdered, updateCoffeeAmount, removeCoffee }
