@@ -1,5 +1,6 @@
 import './OurCoffee.css';
 import Slider from '../components/Slider';
+import '../components/Slider.css';
 
 function OurCoffee() {
 
