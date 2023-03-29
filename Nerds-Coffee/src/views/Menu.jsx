@@ -15,7 +15,6 @@ function Menu() {
 
   useEffect(() => {
     const menu_url = 'https://airbean.awesomo.dev/api/beans/';
-
     async function menuApi() {
     
       const response = await fetch(menu_url);
@@ -38,6 +37,10 @@ function Menu() {
       tempnum = tempnum + order.quantity
       setCoffeeNums(tempnum)
     })
+    if (orders.length === 0) {
+      tempnum = 0
+      setCoffeeNums(tempnum)
+    }
   })
   
 
