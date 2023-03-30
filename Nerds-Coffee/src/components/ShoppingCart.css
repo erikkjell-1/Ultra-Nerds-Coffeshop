@@ -1,7 +1,7 @@
 .dropdown {
     padding: 3rem; 
     background-color: #FFFFFF;
-    z-index: 1000;
+    z-index: 665;
     position: absolute;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -50,7 +50,7 @@ color: #FFFFFF;
 }
 
 .dropdown hr {
-    border: 1px dashed rgba(0, 0, 0, 0.4);
+    border-top: 1px dashed rgba(0, 0, 0, 0.4);
 }
 
 

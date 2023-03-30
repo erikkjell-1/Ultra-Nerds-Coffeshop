@@ -20,7 +20,6 @@ const reducer = (state = initialState, action) => {
                        item.quantity = item.quantity + 1
                        return item
                     } else {
-                        console.log('fel');
                         return item
                     }
                     
