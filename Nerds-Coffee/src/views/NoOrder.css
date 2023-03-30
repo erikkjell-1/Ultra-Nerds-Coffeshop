@@ -1,0 +1,34 @@
+.noorder {
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    background-color: #E5674E;
+}
+
+.noorder__heading {
+    font-family: 'PT Serif';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 120%;
+    color: white;
+}
+
+.noorder__button {
+    background-color: white;
+    color: #2F2926;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 230px;
+    height: 55px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-family: 'PT Serif';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    border: none;
+}

@@ -6,6 +6,7 @@ import Startpage from './views/Startpage'
 import Menu from './views/Menu'
 import Order from './views/Order'
 import OurCoffee from './views/OurCoffee'
+import NoOrder from './views/NoOrder'
 
 
 function App() {
@@ -27,6 +28,10 @@ function App() {
     {
       path: '/ourcoffee',
       element: <OurCoffee />
+    },
+    {
+      path: '/noorder',
+      element: <NoOrder/>
     }
   ])
 

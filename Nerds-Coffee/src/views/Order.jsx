@@ -49,7 +49,7 @@ function Order() {
       checkOrder()
     }
     else {
-      navigate('/menu')
+      navigate('/noorder')
     }
     
   }, [])
