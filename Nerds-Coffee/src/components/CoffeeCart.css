@@ -12,3 +12,16 @@ color: #2F2926;
     justify-content: space-between;
     align-items: center;
 }
+
+.coffeecart__div {
+    width: 8.5rem;
+}
+
+.coffeecart__coffee {
+    display: flex;
+}
+
+.coffeecart__hr {
+    align-self: flex-end;
+    margin-bottom: 2px;
+}

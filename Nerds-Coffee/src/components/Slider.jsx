@@ -20,6 +20,7 @@ function Slider() {
             <Link to='/ourcoffee' className='slider__text' onClick={ closeOverlay }>Vårt Kaffe</Link>
             <hr />
             <Link to='/order' className='slider__text' onClick={ closeOverlay }>Orderstatus</Link>
+            <hr />
             </aside>
         </div>
     )

@@ -1,5 +1,4 @@
 function addCoffee(value) {
-    console.log(value);
     return {
         type: 'add',
         payload: value
