@@ -48,8 +48,9 @@ function Menu() {
     setIsShown(current => !current);
   }
 
+  const slider = document.getElementById("slider")
   function toggleOverlay() {
-    document.getElementById("slider").style.display = "flex";
+    slider.classList.toggle("slider-show");
 }
 
   return (

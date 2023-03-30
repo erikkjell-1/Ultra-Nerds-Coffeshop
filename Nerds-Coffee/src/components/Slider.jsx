@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
 
-function closeOverlay() {
-    document.getElementById("slider").style.display = "none";
-}
-
 function Slider() {
+
+    function closeOverlay() {
+        const slider = document.getElementById("slider")
+        slider.classList.toggle("slider-show");
+    }
+
     return(
         <div className="slider" id="slider">
             
