@@ -5,7 +5,8 @@ import '../components/Slider.css';
 function OurCoffee() {
 
   function toggleOverlay() {
-    document.getElementById("slider").style.display = "flex";
+    const slider = document.getElementById("slider")
+    slider.classList.toggle("slider-show");
 }
 
     return (

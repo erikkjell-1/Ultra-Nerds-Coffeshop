@@ -6,7 +6,13 @@
     width: 100%;
     background-color: rgb(0, 0, 0);
     z-index: 1;
-    display: none;
+    transition: all 0.5s linear;
+    transform: translate(-100%);
+    display: flex;
+  }
+
+  .slider-show{
+    transform: translate(0);
   }
 
 .slider aside {
@@ -18,9 +24,7 @@
     width: 100%;
 }
   
-.slider.show {
-    display: flex;
-  }
+
 
 .slider__text {
     font-family: 'PT Serif';
@@ -47,14 +51,6 @@ color: #FFFFFF;
     left: 10px;
 }
   
-.slider.show {
-    display: flex;
-    transition: 0.3s;
-  }
-
-.slider.close {
-    display: none;
-}
 
 .openSlider {
     width: 48px;
