@@ -1,11 +1,12 @@
 import './Order.css'
-import { useLocation, Link } from "react-router-dom"
+import { useLocation, Link, useNavigate } from "react-router-dom"
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from 'react-redux';
 import { addOrderedCoffee } from "../components/addCoffee";
 import Slider from "../components/Slider";
 
 function Order() {
+  const navigate = useNavigate();
   const navigationState = useLocation();
   const [ordered, setOrdered] = useState({
     orderNr: 'Du har inte beställt något!'
@@ -47,7 +48,9 @@ function Order() {
       }
       checkOrder()
     }
-    
+    else {
+      navigate('/menu')
+    }
     
   }, [])
   function toggleOverlay() {
