@@ -9,6 +9,7 @@
     transition: all 0.5s linear;
     transform: translate(-100%);
     display: flex;
+    z-index: 666;
   }
 
   .slider-show{
