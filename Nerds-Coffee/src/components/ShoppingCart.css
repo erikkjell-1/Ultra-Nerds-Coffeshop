@@ -7,8 +7,8 @@
     grid-template-columns: repeat(1, 1fr);
     position: absolute;
     right: 10px;
-    top: 10px;
-    top: 3.5rem;
+    
+    top: 3.9rem;
     gap: 1rem;
 }
 
@@ -53,5 +53,12 @@ color: #FFFFFF;
     border: 1px dashed rgba(0, 0, 0, 0.4);
 }
 
+.dropdown__triangle {
+    position: absolute;
+    bottom: 97%;
+    right: 15px;
+    border-radius: 2px;
+    z-index: -1;
+}
 
 
