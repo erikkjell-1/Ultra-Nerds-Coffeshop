@@ -32,3 +32,8 @@
     font-size: 24px;
     border: none;
 }
+
+.noorder__button:hover {
+    opacity: 50%;
+    cursor: pointer;
+}

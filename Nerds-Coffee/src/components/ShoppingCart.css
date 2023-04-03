@@ -50,6 +50,12 @@ color: #FFFFFF;
 border: none;
 }
 
+.dropdown button:hover {
+    opacity: 50%;
+    cursor: pointer;
+}
+
+
 .dropdown hr {
     border-top: 1px dashed rgba(0, 0, 0, 0.4);
 }

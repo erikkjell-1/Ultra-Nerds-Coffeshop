@@ -57,3 +57,8 @@
     font-weight: 700;
     font-size: 24px;
 }
+
+.order__button:hover {
+    opacity: 50%;
+    cursor: pointer;
+}

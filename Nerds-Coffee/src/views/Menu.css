@@ -40,6 +40,11 @@ position: relative;
     height: 48px;
 }
 
+.coffee__menu--svg:hover, .cart:hover {
+    opacity: 50%;
+    cursor: pointer;
+}
+
 .cart {
 height: 60px;
 width: 60px;

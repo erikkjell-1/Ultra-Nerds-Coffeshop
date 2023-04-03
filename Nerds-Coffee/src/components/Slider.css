@@ -51,6 +51,11 @@ color: #FFFFFF;
     top: 10px;
     left: 10px;
 }
+
+.close__slider:hover {
+    opacity: 50%;
+    cursor: pointer;
+}
   
 
 .openSlider {
@@ -73,6 +78,7 @@ color: #FFFFFF;
 
 .slider__text:hover {
     opacity: 50%;
+    cursor: pointer;
 }
 
 hr {
